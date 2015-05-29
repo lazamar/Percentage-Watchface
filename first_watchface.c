@@ -5,6 +5,7 @@ static TextLayer *s_time_layer;
 static GFont s_time_font;
 #define PERCMINUTES 0.072
 #define PERCHOURS 4.167
+static union GColor8 colors[12]; 
 
 static void update_time(){
   // Get a tm structure
@@ -37,6 +38,7 @@ static void update_time(){
   // }
 
   // Display this time on the TextLayer 
+  window_set_background_color(s_main_window, colors[hours / 2]);
   text_layer_set_text(s_time_layer, buffer);
 }
 
@@ -46,12 +48,12 @@ static void tick_handler(struct tm *tick_time, TimeUnits units_changed){
 
 static void main_window_load(Window *window){
   
-  window_set_background_color(s_main_window, GColorSunsetOrange);
+  window_set_background_color(s_main_window, GColorRed);
 
   // Create time text layer
   s_time_layer = text_layer_create(GRect(0, 55, 144, 50)); 
   text_layer_set_background_color(s_time_layer, GColorClear); 
-  text_layer_set_text_color(s_time_layer, GColorBlack);
+  text_layer_set_text_color(s_time_layer, GColorWhite);
 
   // Create font
   // s_time_font = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_CYBERFUNK_42));
@@ -81,6 +83,20 @@ static void init(){
     .unload = main_window_unload
   });
   
+  colors[0] = GColorDarkGreen;
+  colors[1] = GColorKellyGreen;
+  colors[2] = GColorIslamicGreen;
+  colors[3] = GColorGreen;
+  colors[4] = GColorSpringBud;
+  colors[5] = GColorInchworm;
+  colors[6] = GColorIcterine;
+  colors[7] = GColorYellow;
+  colors[8] = GColorRajah;
+  colors[9] = GColorChromeYellow;
+  colors[10] = GColorOrange;
+  colors[11] = GColorRed;
+
+
   // Register with TickTimerService
   tick_timer_service_subscribe(MINUTE_UNIT, tick_handler);
 
