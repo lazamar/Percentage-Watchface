@@ -1,0 +1,48 @@
+{
+    "appKeys": {
+        "KEY_CONDITIONS": 1,
+        "KEY_TEMPERATURE": 0
+    },
+    "capabilities": [
+        "location"
+    ],
+    "companyName": "lazaronijunior@gmail.com",
+    "longName": "Percentage Watchface",
+    "projectType": "native",
+    "resources": {
+        "media": [
+            {
+                "file": "images/cover.png",
+                "menuIcon": true,
+                "name": "IMAGE_COVER",
+                "type": "png"
+            },
+            {
+                "file": "fonts/Arimo-Regular.ttf",
+                "name": "FONT_ARIMO_REG_42",
+                "type": "font"
+            },
+            {
+                "file": "fonts/Arimo-Bold.ttf",
+                "name": "FONT_ARIMO_40",
+                "type": "font"
+            },
+            {
+                "characterRegex": "[%]",
+                "file": "fonts/Aller_Std_Bd.ttf",
+                "name": "FONT_ALLER_36",
+                "type": "font"
+            }
+        ]
+    },
+    "sdkVersion": "3",
+    "shortName": "Percentage",
+    "targetPlatforms": [
+        "basalt"
+    ],
+    "uuid": "36f747d6-3a67-49f3-bf88-836b64fc7c6c",
+    "versionLabel": "1.0",
+    "watchapp": {
+        "watchface": true
+    }
+}
