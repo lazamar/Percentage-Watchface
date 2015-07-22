@@ -12,9 +12,9 @@
     "resources": {
         "media": [
             {
-                "file": "images/cover.png",
+                "file": "images/icon.png",
                 "menuIcon": true,
-                "name": "IMAGE_COVER",
+                "name": "IMAGE_ICON",
                 "type": "png"
             },
             {
